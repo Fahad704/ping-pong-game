@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "Utility.cpp"
 #include <Windows.h>

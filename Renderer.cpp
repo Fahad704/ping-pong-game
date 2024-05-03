@@ -1,3 +1,4 @@
+#pragma once
 internal void clear_screen(u32 color) {
 	unsigned* pixel = (u32*)render_state.memory;
 	for (int x = 0; x < render_state.width; x++) {
