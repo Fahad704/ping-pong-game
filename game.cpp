@@ -72,7 +72,7 @@ internal void simulate_game(Input* input, float dt) {
 			player_2.ddp = 0;
 			ball_pos_x = 0;
 			ball_pos_y = 0;
-			current_gamemode = GM_MENU;
+			current_gamemode = Gamemode(GM_MENU);
 		}
 		if (current_gamemode == GM_MULTIPLAYER) {
 			if (is_down(BUTTON_W)) player_1.ddp += 1000;
@@ -159,7 +159,7 @@ internal void simulate_game(Input* input, float dt) {
 			ball_velocity_y = 0;
 			ball_pos_x = 0;
 			ball_pos_y = 0;
-			current_gamemode = GM_MENU;
+			current_gamemode = Gamemode(GM_MENU);
 		}
 		else if (player_2.score == 20) {
 			winstate = 2;
@@ -172,7 +172,7 @@ internal void simulate_game(Input* input, float dt) {
 			ball_velocity_y = 0;
 			ball_pos_x = 0;
 			ball_pos_y = 0;
-			current_gamemode = GM_MENU;
+			current_gamemode = Gamemode(GM_MENU);
 		}
 	}
 	//Render
@@ -194,7 +194,7 @@ internal void simulate_game(Input* input, float dt) {
 			}
 		}
 		else {
-			if (pressed(BUTTON_ENTER)) current_gamemode = GM_MULTIPLAYER;
+			if (pressed(BUTTON_ENTER)) current_gamemode = Gamemode(GM_MULTIPLAYER);
 			draw_text("PING PONG BY FAHAD", -60, 30, 1.2, 0xff0000);
 			draw_text("SINGLE PLAYER", -35, 0, 0.8, 0xff0000);
 			draw_text("MULTIPLAYER", -30, -10, 0.8, 0xffff00);
